@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+    <div class="login">
+        <top>
+        
+        <form action ="{{ url_for('predict')}}" method="post">
+            <input type="text" name="LIMIT_BAL" placeholder="LIMIT_BAL" />
+            <input type="text" name="EDUCATION" placeholder="EDUCATION" />
+            <input type="text" name="MARRIAGE" placeholder="MARRIAGE" />
+            <input type="text" name="AGE" placeholder="AGE" />
+            <input type="text" name="PAY_1" placeholder="PAY_1" />
+            <input type="text" name="BILL_AMT1" placeholder="BILL_AMT1" />
+            <input type="text" name="BILL_AMT2" placeholder="BILL_AMT2" />
+            <input type="text" name="BILL_AMT3" placeholder="BILL_AMT3" />
+            <input type="text" name="BILL_AMT4" placeholder="BILL_AMT4" />
+            <input type="text" name="BILL_AMT5" placeholder="BILL_AMT5" />
+            <input type="text" name="BILL_AMT6" placeholder="BILL_AMT6" />
+            <input type="text" name="PAY_AMT1" placeholder="PAY_AMT1" />
+            <input type="text" name="PAY_AMT2" placeholder="PAY_AMT2" />
+            <input type="text" name="PAY_AMT3" placeholder="PAY_AMT3" />
+            <input type="text" name="PAY_AMT4" placeholder="PAY_AMT4" />
+            <input type="text" name="PAY_AMT5" placeholder="PAY_AMT5" />
+            <input type="text" name="PAY_AMT6" placeholder="PAY_AMT6" />
+       
+            
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    </top>
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
+
